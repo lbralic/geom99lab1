@@ -151,9 +151,3 @@ function initMap() {
 
   italyPolyline.setMap(map);
 }
-
-    
-    
-    
-    
-}
