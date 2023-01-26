@@ -1,18 +1,10 @@
 function initMap() {
+  const rome = { lat: 41.902, lng: 12.496 };
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 6,
     center: { lat: 42.420, lng: 8.976 },
   });
   // Create an array of alphabetical characters used to label the markers.
-
-  // This example displays a marker at the center of Australia.
-// When the user clicks the marker, an info window opens.
-function initMap() {
-  const uluru = { lat: -25.363, lng: 131.044 };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: uluru,
-  });
   
   // Inspiration: https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
   const contentString =
