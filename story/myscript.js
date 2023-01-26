@@ -38,17 +38,14 @@ const contentRome =
     {
       position: rome,
       title: "Rome",
-      content: contentRome,
     },
     {
       position: san_gimi,
       title: "San Gimignano",
-      content: contentRome,
     },
     {
       position: florence,
       title: "Florence",
-      content: contentRome,
     }
   ];
     
