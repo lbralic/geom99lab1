@@ -1,5 +1,7 @@
 function initMap() {
     const rome = { lat: 41.902, lng: 12.496 };
+    const san_gimi = { lat: 43.467, lng: 43.467 };
+    const florence = { lat: 43.769, lng: 11.255 };
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 6,
       center: { lat: 42.420, lng: 8.976 },
@@ -7,7 +9,24 @@ function initMap() {
     
     
     // Inspiration: https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
-    const contentString =
+    // advanced-markers-accessibility from https://googlemaps.github.io/js-samples/
+    
+    const numMarkers = [
+    {
+      position: rome,
+      title: "Rome",
+    },
+    {
+      position: san_gimi,
+      title: "San Gimignano",
+    },
+    {
+      position: florence,
+      title: "Florence",
+    }
+  ];
+    
+    const contentRome =
       '<div id="content">' +
       '<div id="siteNotice">' +
       "</div>" +
@@ -29,13 +48,22 @@ function initMap() {
       "</div>" +
       "</div>";
     const infowindow = new google.maps.InfoWindow({
-      content: contentString,
+      content: contentRome,
       ariaLabel: "Rome",
     });
+    
+  
+    numMarkers.forEach(({ position, title }, i) => {
+    const pinView = new google.maps.marker.PinView({
+      glyph: `${i + 1}`,
+    });
+    
+    
     const marker = new google.maps.Marker({
-      position: rome,
+      position,
       map,
-      title: "Rome",
+      title: `${i + 1}. ${title}`,
+      content: pinView.element,
     });
   
     marker.addListener("click", () => {
