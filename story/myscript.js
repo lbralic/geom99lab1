@@ -132,4 +132,28 @@ function initMap() {
     });
   });
     
+    
+    // Polyline
+    // Inspiration: https://developers.google.com/maps/documentation/javascript/examples/polyline-simple
+    
+    const italyPolylineCoord = [
+    rome,
+    sangimi,
+    florence,
+  ];
+  const italyPolyline = new google.maps.Polyline({
+    path: italyPolylineCoord,
+    geodesic: true,
+    strokeColor: "#0000FF",
+    strokeOpacity: 1.0,
+    strokeWeight: 2,
+  });
+
+  italyPolyline.setMap(map);
+}
+
+    
+    
+    
+    
 }
