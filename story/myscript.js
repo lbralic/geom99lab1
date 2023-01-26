@@ -5,6 +5,7 @@ function initMap() {
     center: { lat: 42.420, lng: 8.976 },
   });
   
+  
   // Inspiration: https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
   const contentString =
     '<div id="content">' +
@@ -37,10 +38,22 @@ function initMap() {
     title: "Rome",
   });
 
-  marker.addListener("click", () => {
+    marker.addListener("click", () => {
     infowindow.open({
       anchor: marker,
       map,
     });
   });
+  
+  // Inspiration: "advanced-markers-html-simple" from https://googlemaps.github.io/js-samples/
+  const bubbleMarker = document.createElement("div");
+  bubbleMarker.className = "bubble-marker";
+  bubbleMarker.textContent = "Rome";
+  
+  const markerView = new google.maps.marker.AdvancedMarkerView({
+    map,
+    position: rome,
+    content: bubbleMarker,
+  });
 }
+  
