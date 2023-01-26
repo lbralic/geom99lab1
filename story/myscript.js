@@ -55,7 +55,7 @@ function initMap() {
     map,
   });
 });
-
+}
 
 declare global {
   interface Window {
