@@ -59,17 +59,19 @@ function initMap() {
     });
     
     
-    const marker = new google.maps.Marker({
+    const marker = new google.maps.AdvancedMarkerView({
       position,
       map,
       title: `${i + 1}. ${title}`,
       content: pinView.element,
     });
   
-    marker.addListener("click", () => {
-    infowindow.open({
-      anchor: marker,
-      map,
+    // Add a click listener for each marker, and set up the info window.
+    marker.addListener("click", ({ domEvent, latLng }) => {
+      const { target } = domEvent;
+      infoWindow.close();
+      infoWindow.setContent(marker.title);
+      infoWindow.open(marker.map, marker);
     });
   });
 }
