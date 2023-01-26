@@ -1,7 +1,6 @@
 function initMap() {
     const rome = { lat: 41.902, lng: 12.496 };
     const sangimi = { lat: 43.467, lng: 43.467 };
-    const florence = { lat: 43.769, lng: 11.255 };
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 6,
       center: { lat: 42.420, lng: 8.976 },
@@ -9,7 +8,7 @@ function initMap() {
     
     
     // Inspiration: https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
-    const contentRome =
+    const contentString =
       '<div id="content">' +
       '<div id="siteNotice">' +
       "</div>" +
@@ -31,7 +30,7 @@ function initMap() {
       "</div>" +
       "</div>";
     const infowindow = new google.maps.InfoWindow({
-      content: contentRome,
+      content: contentString,
       ariaLabel: "Rome",
     });
     const marker = new google.maps.Marker({
@@ -40,15 +39,22 @@ function initMap() {
       title: "Rome",
     });
   
+    marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });
     
-    // San Giminano
-    const contentSanGimi =
+    /// San Gimignano
+    
+        const contentString2 =
       '<div id="content">' +
       '<div id="siteNotice">' +
       "</div>" +
       '<h1 id="firstHeading" class="firstHeading">Rome</h1>' +
       '<div id="bodyContent">' +
-      "<p><b>San Giminano</b>, also referred to as <b>Ayers Rock</b>, is a large " +
+      "<p><b>Rome</b>, also referred to as <b>Ayers Rock</b>, is a large " +
       "sandstone rock formation in the southern part of the " +
       "Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) " +
       "south west of the nearest large town, Alice Springs; 450&#160;km " +
@@ -63,23 +69,22 @@ function initMap() {
       "(last visited June 22, 2009).</p>" +
       "</div>" +
       "</div>";
-    const infowindow = new google.maps.InfoWindow({
-      content: contentSanGimi,
-      ariaLabel: "San Giminano",
+    const infowindow2 = new google.maps.InfoWindow({
+      content: contentString,
+      ariaLabel: "San Gimignano",
     });
-    const marker = new google.maps.Marker({
-      position: rome,
+    const marker2 = new google.maps.Marker({
+      position: sangimi,
       map,
-      title: "San Giminano",
+      title: "San Gimignano",
     });
-    
-    
-    
-    
+  
     marker.addListener("click", () => {
-    infowindow.open({
-      anchor: marker,
+    infowindow2.open({
+      anchor: marker2,
       map,
     });
   });
+    
+    
 }
