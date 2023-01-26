@@ -28,32 +28,19 @@ function initMap() {
       "(last visited June 22, 2009).</p>" +
       "</div>" +
       "</div>";
-
     const infowindow = new google.maps.InfoWindow({
       content: contentString,
       ariaLabel: "Rome",
     });
-    
     const marker = new google.maps.Marker({
       position: rome,
       map,
       title: "Rome",
     });
   
-    // Inspiration: "advanced-markers-html-simple" from https://googlemaps.github.io/js-samples/
-    // const bubbleMarker = document.createElement("div");
-    // bubbleMarker.className = "bubble-marker";
-    // bubbleMarker.textContent = "Rome";
-    
-    // const markerView = new google.maps.marker.AdvancedMarkerView({
-    //   map,
-    //   position: rome,
-    //   content: bubbleMarker,
-    // });
-  
-    markerView.addListener("click", () => {
+    marker.addListener("click", () => {
     infowindow.open({
-      anchor: markerView,
+      anchor: marker,
       map,
     });
   });
