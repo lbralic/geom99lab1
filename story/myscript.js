@@ -1,6 +1,6 @@
 function initMap() {
     const rome = { lat: 41.902, lng: 12.496 };
-    const sangimi = { lat: 43.467, lng: 43.467 };
+    const sangimi = { lat: 43.467, lng: 11.043 };
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 6,
       center: { lat: 42.420, lng: 8.976 },
@@ -79,7 +79,7 @@ function initMap() {
       title: "San Gimignano",
     });
   
-    marker.addListener("click", () => {
+    marker2.addListener("click", () => {
     infowindow2.open({
       anchor: marker2,
       map,
