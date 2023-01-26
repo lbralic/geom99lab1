@@ -32,19 +32,12 @@ function initMap() {
     content: contentString,
     ariaLabel: "Rome",
   });
-  const marker = new google.maps.Marker({
-    position: rome,
-    map,
-    title: "Rome",
-  });
+  //const marker = new google.maps.Marker({
+    //position: rome,
+    //map,
+    //title: "Rome",
+  //});
 
-    marker.addListener("click", () => {
-    infowindow.open({
-      anchor: marker,
-      map,
-    });
-  });
-  
   // Inspiration: "advanced-markers-html-simple" from https://googlemaps.github.io/js-samples/
   const bubbleMarker = document.createElement("div");
   bubbleMarker.className = "bubble-marker";
@@ -55,7 +48,14 @@ function initMap() {
     position: rome,
     content: bubbleMarker,
   });
-}
+
+  markerView.addListener("click", () => {
+  infowindow.open({
+    anchor: markerView,
+    map,
+  });
+});
+
 
 declare global {
   interface Window {
