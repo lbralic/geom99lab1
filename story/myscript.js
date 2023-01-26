@@ -4,7 +4,6 @@ function initMap() {
     zoom: 6,
     center: { lat: 42.420, lng: 8.976 },
   });
-  // Create an array of alphabetical characters used to label the markers.
   
   // Inspiration: https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
   const contentString =
