@@ -35,6 +35,7 @@ function initMap() {
     });
     const marker = new google.maps.Marker({
       position: rome,
+      label: "1",
       map,
       title: "Rome",
     });
@@ -75,6 +76,7 @@ function initMap() {
     });
     const marker2 = new google.maps.Marker({
       position: sangimi,
+      label: "2",
       map,
       title: "San Gimignano",
     });
