@@ -15,7 +15,7 @@ function initMap() {
       "</div>" +
       '<h1 id="firstHeading" class="firstHeading">Rome</h1>' +
       '<div id="bodyContent">' +
-      "<p>My trip began in Rome. Despite only staying for two days, I was able " +
+      "<p>My trip began in Rome. Despite only staying for a day, I was able " +
       "to see a variety attractions. These included the famous Collesseum, " +
       "The Aventine Keyhole, and many lesser known cathedrals and churches.</p>"
       "</div>";
@@ -80,7 +80,7 @@ function initMap() {
       '<div id="bodyContent">' +
       "<p>My final stop was Florence, where I visited family. I got to see " +
       "the Cathedral of Santa Maria del Fiore, The Boboli Gardens, The Pitti " +
-      "Palace, and the Uffizi Gallery. This was favourite stop, and I would " +
+      "Palace, and the Uffizi Gallery. This was my favourite stop, and I would " +
       "like to visit again sometime in the future.</p>" +
       "</div>" +
       "</div>";
