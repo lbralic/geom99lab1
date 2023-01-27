@@ -16,7 +16,7 @@ function initMap() {
       '<h1 id="firstHeading" class="firstHeading">Rome</h1>' +
       '<div id="bodyContent">' +
       "<p>My trip began in Rome. Despite only staying for a day, I was able " +
-      "to see a variety attractions. These included the famous Collesseum, " +
+      "to see a variety attractions. These included the famous Colosseum, " +
       "The Aventine Keyhole, and many lesser known cathedrals and churches.</p>" +
       "</div>";
     const infowindow = new google.maps.InfoWindow({
@@ -46,7 +46,7 @@ function initMap() {
       '<h1 id="firstHeading" class="firstHeading">San Gimignano</h1>' +
       '<div id="bodyContent">' +
       "<p>San Gimignano is a small village located within Tuscany, and it is where " +
-      "I spent a large portion of my trip. I got a tour of the lush vinyards in this region, " +
+      "I spent a large portion of my trip. I got a tour of the lush vineyards in this region, " +
       "and I got the chance to learn about the wine-making process.</p>" +
       "</div>" +
       "</div>";
