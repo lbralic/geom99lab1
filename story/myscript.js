@@ -18,7 +18,6 @@ function initMap() {
       "<p>My trip began in Rome. Despite only staying for a day, I was able " +
       "to see a variety attractions. These included the famous Collesseum, " +
       "The Aventine Keyhole, and many lesser known cathedrals and churches.</p>" +
-      '<img src="rome.jpg" alt="Rome">' +
       "</div>";
     const infowindow = new google.maps.InfoWindow({
       content: contentRome,
@@ -48,7 +47,7 @@ function initMap() {
       '<div id="bodyContent">' +
       "<p>San Gimignano is a small village located within Tuscany, and it is where " +
       "I spent a large portion of my trip. I got a tour of the lush vinyards in this region, " +
-      "and I got the chance to learn about the wine-making process.</p>"
+      "and I got the chance to learn about the wine-making process.</p>" +
       "</div>" +
       "</div>";
     const infowindow2 = new google.maps.InfoWindow({
