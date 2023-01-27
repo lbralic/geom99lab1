@@ -3,8 +3,8 @@ function initMap() {
     const sangimi = { lat: 43.467, lng: 11.043 };
     const florence = { lat: 43.769, lng: 11.255 };
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 6,
-      center: { lat: 42.420, lng: 8.976 },
+      zoom: 8,
+      center: { lat: 42.941, lng: 11.998 },
     });
     
     
@@ -144,9 +144,9 @@ function initMap() {
   const italyPolyline = new google.maps.Polyline({
     path: italyPolylineCoord,
     geodesic: true,
-    strokeColor: "#0000FF",
+    strokeColor: "#7700C8",
     strokeOpacity: 1.0,
-    strokeWeight: 2,
+    strokeWeight: 2.5,
   });
 
   italyPolyline.setMap(map);
