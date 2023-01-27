@@ -9,29 +9,18 @@ function initMap() {
     
     
     // Inspiration: https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
-    const contentString =
+    const contentRome =
       '<div id="content">' +
       '<div id="siteNotice">' +
       "</div>" +
       '<h1 id="firstHeading" class="firstHeading">Rome</h1>' +
       '<div id="bodyContent">' +
-      "<p><b>Rome</b>, also referred to as <b>Ayers Rock</b>, is a large " +
-      "sandstone rock formation in the southern part of the " +
-      "Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) " +
-      "south west of the nearest large town, Alice Springs; 450&#160;km " +
-      "(280&#160;mi) by road. Kata Tjuta and Uluru are the two major " +
-      "features of the Uluru - Kata Tjuta National Park. Uluru is " +
-      "sacred to the Pitjantjatjara and Yankunytjatjara, the " +
-      "Aboriginal people of the area. It has many springs, waterholes, " +
-      "rock caves and ancient paintings. Uluru is listed as a World " +
-      "Heritage Site.</p>" +
-      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-      "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
-      "(last visited June 22, 2009).</p>" +
-      "</div>" +
+      "<p>My trip began in Rome. Despite only staying for two days, I was able " +
+      "to see a variety attractions. These included the famous Collesseum, " +
+      "The Aventine Keyhole, and many lesser known cathedrals and churches.</p>"
       "</div>";
     const infowindow = new google.maps.InfoWindow({
-      content: contentString,
+      content: contentRome,
       ariaLabel: "Rome",
     });
     const marker = new google.maps.Marker({
@@ -50,11 +39,11 @@ function initMap() {
     
     /// San Gimignano
     
-        const contentString2 =
+   const contentSanGimi =
       '<div id="content">' +
       '<div id="siteNotice">' +
       "</div>" +
-      '<h1 id="firstHeading" class="firstHeading">Rome</h1>' +
+      '<h1 id="firstHeading" class="firstHeading">San Gimignano</h1>' +
       '<div id="bodyContent">' +
       "<p><b>Rome</b>, also referred to as <b>Ayers Rock</b>, is a large " +
       "sandstone rock formation in the southern part of the " +
@@ -72,7 +61,7 @@ function initMap() {
       "</div>" +
       "</div>";
     const infowindow2 = new google.maps.InfoWindow({
-      content: contentString,
+      content: contentSanGimi,
       ariaLabel: "San Gimignano",
     });
     const marker2 = new google.maps.Marker({
@@ -93,11 +82,11 @@ function initMap() {
     
     // Florence marker
     
-      const contentString3 =
+    const contentFlorence =
       '<div id="content">' +
       '<div id="siteNotice">' +
       "</div>" +
-      '<h1 id="firstHeading" class="firstHeading">Rome</h1>' +
+      '<h1 id="firstHeading" class="firstHeading">Florence</h1>' +
       '<div id="bodyContent">' +
       "<p><b>Rome</b>, also referred to as <b>Ayers Rock</b>, is a large " +
       "sandstone rock formation in the southern part of the " +
@@ -115,7 +104,7 @@ function initMap() {
       "</div>" +
       "</div>";
     const infowindow3 = new google.maps.InfoWindow({
-      content: contentString,
+      content: contentFlorence,
       ariaLabel: "Florence",
     });
     const marker3 = new google.maps.Marker({
